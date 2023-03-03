@@ -24,20 +24,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
-    <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
+   
 
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
@@ -63,26 +50,24 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#projects"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#courses"
-                >Courses</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#contact"
-                >Contact</a
-              >
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#info">Info</a>
+                    
+                </li>
+            </ul>
         </div>
       </div>
     </nav>
@@ -104,7 +89,7 @@
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
-          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
+          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm Trevor
           <span id="name"></span>!
         </h4>
       </div>
@@ -333,74 +318,109 @@
         </div>
       </div>
     </div>
-    <div
-      class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
-      id="contact"
-    >
-      <div class="row mx-auto">
-        <h4 class="h1 font-weight-bold mx-auto text-center">
-          Feel Like Reaching Out?
-        </h4>
-      </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center">
-          I don't bite.
-        </h5>
-      </div>
-      <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
-          <iconify-icon
-            icon="logos:google-gmail"
-            width="60"
-            height="60"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Email"
-          ></iconify-icon>
-        </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
-          ><iconify-icon
-            icon="skill-icons:linkedin"
-            width="60"
-            height="60"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="LinkedIn"
-          ></iconify-icon>
-        </a>
-        <a href="https://github.com/johndoe" class="col"
-          ><iconify-icon
-            icon="skill-icons:github-dark"
-            width="60"
-            height="60"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="GitHub"
-          ></iconify-icon>
-        </a>
-      </div>
-      <div class="row mt-5">
-        <div>
-          <a href="#home">
-            <button type="button" class="btn btn-primary">
-              Return to Top<iconify-icon
-                icon="material-symbols:arrow-circle-up"
-                class="fs-5"
-                style="margin-bottom: -3.5px; margin-left: 5px"
-              ></iconify-icon></button
-          ></a>
+    <div class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
+         id="contact">
+        <div class="row mx-auto">
+            <h4 class="h1 font-weight-bold mx-auto text-center">
+                Feel Like Reaching Out?
+            </h4>
         </div>
-      </div>
+        <div class="row mx-auto">
+            <h5 class="h5 mx-auto text-opacity-75 text-primary text-center">
+                I don't bite.
+            </h5>
+        </div>
+        <div class="row my-4 contact-wrapper gap-3">
+            <a href="mailto:johndoe@gmail.com" class="col text-black">
+                <iconify-icon icon="logos:google-gmail"
+                              width="60"
+                              height="60"
+                              data-bs-toggle="tooltip"
+                              data-placement="top"
+                              title="Email"></iconify-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/johndoe/" class="col">
+                <iconify-icon icon="skill-icons:linkedin"
+                              width="60"
+                              height="60"
+                              data-bs-toggle="tooltip"
+                              data-placement="top"
+                              title="LinkedIn"></iconify-icon>
+            </a>
+            <a href="https://github.com/johndoe" class="col">
+                <iconify-icon icon="skill-icons:github-dark"
+                              width="60"
+                              height="60"
+                              data-bs-toggle="tooltip"
+                              data-placement="top"
+                              title="GitHub"></iconify-icon>
+            </a>
+        </div>
+
+        <div class="row mt-3">
+            <a href="#info" class="col">
+                <iconify-icon icon="material-symbols:arrow-circle-down"
+                             ></iconify-icon>
+            </a>
+        </div>
+    </div>
+    <div class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
+         id="info">
+        <div class="row mx-auto">
+            <h4 class="h1 font-weight-bold mx-auto text-center">Info</h4>
+        </div>
+        <div class="row mx-auto">
+            <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
+                Learn more about the major below
+            </h5>
+        </div>
+        <div class="row w-100">
+            <h5>IS&T</h5>
+        </div>
+        <div class="row w-100 mb-4">
+            <p class="text-justify">
+                Light computer science with many applications in business!
+            </p>
+        </div>
+        <div class="hero-unit">
+            <h1>Information Science and Technology</h1>
+            <p>
+                Like computer science, but Different!learn more Learn more on temple's bulletin
+                Learn more on temple's bulletin'
+                My Degree status bar listed below
+            </p>
+            <p>
+                <a class="btn btn-primary btn-large">
+                  
+                </a>
+            </p>
+
+            <div class="progress progress-info">
+                <div class="bar" style="width: 90%;" color="red";></div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div>
+                <a href="#home">
+                    <button type="button" class="btn btn-primary">
+                        Return to Top<iconify-icon icon="material-symbols:arrow-circle-up"
+                                                   class="fs-5"
+                                                   style="margin-bottom: -3.5px; margin-left: 5px"></iconify-icon>
+                    </button>
+                </a>
+            </div>
+        </div>
+
     </div>
 
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      )
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) =>
-          new bootstrap.Tooltip(tooltipTriggerEl, { delay: { hide: 50 } })
-      )
-    </script>
-  </body>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll(
+                '[data-bs-toggle="tooltip"]'
+            )
+            const tooltipList = [...tooltipTriggerList].map(
+                (tooltipTriggerEl) =>
+                    new bootstrap.Tooltip(tooltipTriggerEl, { delay: { hide: 50 } })
+            )
+        </script>
+</body>
 </html>
